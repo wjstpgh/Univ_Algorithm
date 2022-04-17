@@ -58,9 +58,9 @@ w\:* {behavior:url(#default#vml);}
 .shape {behavior:url(#default#vml);}
 </style>
 <![endif]
---><title></title><style type="text/css"><!--p.0
+--><!--p.0
 {mso-style-name:"바탕글";line-height:160%;margin-left:0pt;margin-right:0pt;text-indent:0pt;margin-top:0pt;margin-bottom:0pt;text-align:justify;word-break:break-hangul;layout-grid-mode:both;background:#ffffff;vertical-align:baseline;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;mso-ascii-font-family:맑은 고딕;mso-ascii-font-family:맑은 고딕;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:10.0pt;color:#000000;mso-font-kerning:0pt;background:#ffffff;}
---></style></head><body><!--StartFragment-->
+--></head><body><!--StartFragment-->
 
 데이터 셋 | 1000 | 5000 | 10000 | 20000 | 50000 | 100000
 -- | -- | -- | -- | -- | -- | --
@@ -68,3 +68,42 @@ w\:* {behavior:url(#default#vml);}
 퀵정렬 | 0.001 | 0.0011 | 0.0035 | 0.008 | 0.0114 | 0.012
 
 <!--EndFragment--></body></html>
+
+> 편의상 소수점 다섯 번째 자리수에서 버림하였습니다.
+
+> 합병정렬 시간복잡도 : O(nlogn) + 보조기억장소
+
+> 퀵정렬 시간복잡도 : (평균의 경우) O(nlogn) (최악의 경우) O(n2) + 중간값
+
+데이터셋 1만개 전까지는 퀵정렬이 빠른 것을 확인 가능하고 1만개 이후부터는 합병정렬이 빠른 것을 확인 가능하다. 퀵정렬은 데이터셋이 늘어날수록 증가치가 큰 반면에 합병정렬은 데이터셋이 늘어나도 증가치가 작은 것으로 통해 
+
+데이터셋이 클수록 합병정렬이 유리하고, 
+
+데이터셋이 작다면 퀵정렬이 유리한 것을 유추가능하다.
+
+* Capture
+
+N=1000
+
+![image](https://user-images.githubusercontent.com/26988563/163716779-bef4ff23-d3a7-42a7-8001-c8af30f26c19.png)
+
+N=5000
+
+![image](https://user-images.githubusercontent.com/26988563/163716788-39656e21-7a76-48c5-864f-9b14fe9b7851.png)
+
+N=10000
+
+![image](https://user-images.githubusercontent.com/26988563/163716800-ce654c77-f3a4-4a34-9164-0e064b90c107.png)
+
+N=20000
+
+![image](https://user-images.githubusercontent.com/26988563/163716812-9603924f-4408-4f2a-8862-3b35e4efb50e.png)
+
+N=50000
+
+![image](https://user-images.githubusercontent.com/26988563/163716820-7c69919e-79f1-40b1-9313-69897ab86d49.png)
+
+N=100000
+
+![image](https://user-images.githubusercontent.com/26988563/163716826-f2ed0f82-be73-439b-bc1c-bff51d6d4694.png)
+
