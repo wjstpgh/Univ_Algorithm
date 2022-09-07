@@ -1,7 +1,7 @@
 
 public class Mergesort {
-
-	private	int a[], b[] ;
+	
+    private int a[], b[] ;
     private int aSize ;
     
     public Mergesort(int arr[], int n){  //생성자 함수, 정렬할 데이터를 배열 a 에 받음
